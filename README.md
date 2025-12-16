@@ -19,4 +19,4 @@ View your app in AI Studio: https://ai.studio/apps/drive/1gYePn38J1f07t25t3kahXB
 3. Run the app:
    `npm run dev`
 
-### Demo Video [![Project Demo]](https://www.youtube.com/watch?v=ePNQbBOkbss)
+### Demo Video [[Project Demo]](https://www.youtube.com/watch?v=ePNQbBOkbss)
