@@ -1,0 +1,7 @@
+{
+  "name": "Math Support",
+  "description": "An intelligent mathematics assistant that helps users solve exercises, analyzes their skills to find weak points, and generates targeted practice problems.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}

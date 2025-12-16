@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Math Support</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- KaTeX CSS - Load first -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" crossorigin="anonymous">
+    
+    <style>
+      body {
+        font-family: 'Helvetica', 'Arial', sans-serif;
+        background-color: #ddead1;
+      }
+      /* Ensure Tailwind's font-sans uses Helvetica */
+      .font-sans {
+        font-family: 'Helvetica', 'Arial', sans-serif !important;
+      }
+      /* Hide scrollbar for Chrome, Safari and Opera */
+      .no-scrollbar::-webkit-scrollbar {
+          display: none;
+      }
+      /* Hide scrollbar for IE, Edge and Firefox */
+      .no-scrollbar {
+          -ms-overflow-style: none;  /* IE and Edge */
+          scrollbar-width: none;  /* Firefox */
+      }
+      
+      /* KaTeX display fixes */
+      .katex-display {
+        margin: 0.5em 0;
+        overflow-x: auto;
+        overflow-y: hidden;
+      }
+      .katex {
+        font-size: 1.1em;
+      }
+    </style>
+    
+    <script type="importmap">
+    {
+      "imports": {
+        "recharts": "https://aistudiocdn.com/recharts@^3.5.1",
+        "@google/genai": "https://aistudiocdn.com/@google/genai@^1.31.0",
+        "lucide-react": "https://aistudiocdn.com/lucide-react@^0.556.0",
+        "react/": "https://aistudiocdn.com/react@^19.2.1/",
+        "react": "https://aistudiocdn.com/react@^19.2.1",
+        "react-dom/client": "https://aistudiocdn.com/react-dom@^19.2.1/client",
+        "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/"
+      }
+    }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    
+    <!-- KaTeX JS - Load BEFORE your app, synchronously -->
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" crossorigin="anonymous"></script>
+    
+    <!-- Verify KaTeX loaded -->
+    <script>
+      if (window.katex) {
+        console.log('✅ KaTeX loaded successfully');
+      } else {
+        console.error('❌ KaTeX failed to load');
+      }
+    </script>
+    
+    <!-- Your app - Load AFTER KaTeX -->
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
